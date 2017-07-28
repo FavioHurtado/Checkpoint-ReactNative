@@ -5,28 +5,31 @@
  */
 
 import React, { Component } from 'react';
-import MapView from 'react-native-maps';
+import Mapa from './app/Components/Mapa/Mapa';
 import {
   AppRegistry,
   StyleSheet,
   Text,
   View
 } from 'react-native';
+const puntosDeControl=[
+    {latitude: -17.8,
+     longitude: -63.182291,},
+     {latitude: -17.7857846,
+     longitude: -63.182291,},
+     {latitude: -17.787,
+     longitude: -63.182291,},
+    
 
+]
 export default class checkpoint extends Component {
   render() {
+    //console.log('a');
     return (
-       <View style ={styles.container1}>
-        <MapView
-          style={styles.map}
-          region={{
-            latitude: 37.78825,
-            longitude: -122.4324,
-            latitudeDelta: 0.015,
-            longitudeDelta: 0.0121,
-          }}
-        >
-        </MapView>
+      <View>
+      <Text>Hola h!!! </Text>
+       <Mapa />
+       
       </View>
      
     );
@@ -50,16 +53,7 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
-  container1: {
-    ...StyleSheet.absoluteFillObject,
-    height: 400,
-    width: 400,
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-  },
-  map: {
-    ...StyleSheet.absoluteFillObject,
-  },
+  
 });
 
 AppRegistry.registerComponent('checkpoint', () => checkpoint);
